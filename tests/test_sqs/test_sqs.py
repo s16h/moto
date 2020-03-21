@@ -68,7 +68,7 @@ def test_create_queue_with_different_attributes_fail():
     except botocore.exceptions.ClientError as err:
         err.response["Error"]["Code"].should.equal("QueueAlreadyExists")
     else:
-        raise RuntimeError("Should of raised QueueAlreadyExists Exception")
+        raise RuntimeError("Should have raised QueueAlreadyExists Exception")
 
 
 @mock_sqs
